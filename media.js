@@ -89,7 +89,9 @@ function openMedia(url, title) {
 function closeMedia() {
   media.html("")
   toggleOverlay();
-  toggleWeatherBox();
+  musicBtn.removeAttr("data-music")
+  movieBtn.removeAttr("data-movie")
+  toggleWeatherBox()
 }
 
 function toggleOverlay() {
@@ -102,14 +104,23 @@ media.on("click", closeMedia)
 
 function toggleWeatherBox(){
 
-  $(".city-search").toggleClass("hide")
-  $(".zip-search").toggleClass("hide")
-  $(".weather-result").toggleClass("hide")
+  if(musicBtn.attr("data-music")==="on" ||
+   movieBtn.attr("data-movie")==="on"){
+
+  $(".city-search").addClass("hide")
+  $(".zip-search").addClass("hide")
+  $(".weather-result").addClass("hide")
+  $(".select").addClass("selectMove")}
+  else{
+    $(".city-search").removeClass("hide")
+  $(".zip-search").removeClass("hide")
+  $(".weather-result").removeClass("hide")
+  $(".select").removeClass("selectMove")
+
+  }
 }
 
-function toggleSelect(){
-  $(".select").toggleClass("selectMove")
-}
+
 
 
 var clearKeyword;    //("Clear")
@@ -120,9 +131,11 @@ var windKeyword;  //("Windy")
 var mistKeyword; //("Mist")
 
 musicBtn.on("click", async function () {
-  toggleWeatherBox();
-  toggleSelect();
+  
   numResults = $("#numRecords").val()
+  musicBtn.attr("data-music", "on")
+  toggleWeatherBox();
+  if (musicBtn.attr("data-music")==="on"){
   var userWeather = $("#main_weather").text()
 
   if (userWeather.includes("Clear")) {
@@ -234,15 +247,17 @@ musicBtn.on("click", async function () {
 
   }
 
-
+}
   runRandom(numResults,"music");
 })
 
 
 movieBtn.on("click", async function () {
  
-  
   numResults = $("#numRecords").val()
+  movieBtn.attr("data-movie" , "on")
+  toggleWeatherBox();
+  if (movieBtn.attr("data-movie")==="on"){
   var userWeather = $("#main_weather").text()
 
   if (userWeather.includes("Clear")) {
@@ -354,7 +369,7 @@ movieBtn.on("click", async function () {
 
   }
 
-
+}
   runRandom(numResults, "movie");
 })
 
