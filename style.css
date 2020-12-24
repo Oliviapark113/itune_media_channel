@@ -1,0 +1,194 @@
+*{ box-sizing: border-box; }
+
+body{
+    margin: 0; 
+    padding: 0; 
+    background: linear-gradient(#000a12,#263238);
+    color: whitesmoke;
+    font-family: 'Big Shoulders Stencil Text', cursive;
+    height: 200vh;
+}
+a {
+    color: whitesmoke;  
+}
+
+
+.search_btn{
+    color: whitesmoke;
+    padding: 8px;
+    margin: auto;
+
+}
+.navbar{
+    background-color:#000a12 ;
+}
+.logo{
+    background:transparent;
+    text-align: center;  
+}
+
+.weather-container input {
+    margin: 0px auto;
+    padding:5px;
+    width: 80%;
+    border: 1px solid whitesmoke;
+    text-align: center;
+    background-color:#000a12;
+    outline: none;
+    border-radius: 14px 0px 14px 0px;
+    cursor: pointer;
+    transition: 0.7s ease-out;
+    box-shadow:0px 0px 10px whitesmoke;
+   
+}
+
+.weather-container input:focus{
+    color: whitesmoke;
+    top: 300%;
+    right:500%;
+    transform: scale(1.2) translate(50%, 50%);
+    margin: 10px;
+
+}
+
+
+.hide{
+    display: none;
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+
+
+.weather-result{
+    transition: all .7s ease;
+    display:block;
+    text-align: center;
+    padding: 5px;
+}
+
+.form-control {
+    transition: all .7s ease;
+    margin: 8px auto;
+    padding:5px;
+    width: 80%;
+    border: none;
+    outline: none;
+    border: 1px solid whitesmoke;
+    text-align: center;
+    background-color:#000a12;
+    outline: none;
+    border-radius: 0px 14px 0px 14px;
+    box-shadow:0px 0px 10px whitesmoke;
+}
+.select p {
+    text-align: center;
+}
+
+.button-container{
+ display: flex;
+ align-items: center;
+ padding: 5px;
+}
+#musicBtn
+ {  
+    border-radius: 10px 0px 10px 0px;
+    box-shadow:0px 0px 10px whitesmoke;
+    
+}
+
+#movieBtn {  
+    border-radius: 0px 10px 0px 10px;
+    box-shadow:0px 0px 10px whitesmoke;
+}
+
+.selectMove{
+    position: relative;
+    animation-name: mySelect;
+    animation-duration: 2s;
+    animation-delay: .5s;
+}
+
+
+  
+  @keyframes mySelect {
+ 
+    50%  { left:100px;} 
+    100%  { left:0px; top:200px;}
+   
+  }
+
+
+ .mv-container{
+    width: 100%;
+    margin:0;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    transform: perspective(3500px) rotate3d(0,1,0,30deg);
+
+} 
+
+
+
+.video-container{
+  
+width: 100%;
+
+ 
+
+} 
+.artist-image{
+    width:180px;
+    height:180px;
+    margin: 13px;
+    cursor: pointer;
+    margin: 10px auto;
+   
+}
+
+
+.artist-image:hover{
+    transform: scale(1.1); 
+    box-shadow:0px 0px 10px whitesmoke;
+
+}
+
+.info{
+    font-size: 12px;
+    text-align:center;
+}
+
+.media{
+   margin-top: 100px;
+    box-shadow: 0px 0px 80px 8px rgba(255, 255, 255, .1);
+    transition: all 2s ease; 
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 5px;
+    width: 720px;
+
+}
+
+
+
+.media p{
+    text-align: center; 
+    font-size: 16px;
+    padding:10px; 
+
+}
+
+
+.blur{
+    opacity: 0.3;
+    transition: all 2s ease;
+    background-color: whitesmoke;
+} 
+
+.closeBtn{
+    background-color:#000a12;
+    color:whitesmoke; 
+    border-radius: 5px;
+    text-align:left;
+}
