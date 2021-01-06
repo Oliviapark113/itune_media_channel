@@ -7,6 +7,7 @@ body{
     color: whitesmoke;
     font-family: 'Big Shoulders Stencil Text', cursive;
     height: 200vh;
+    font-size: 20px;
 }
 a {
     color: whitesmoke;  
@@ -25,6 +26,10 @@ a {
 .logo{
     background:transparent;
     text-align: center;  
+}
+h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 68px;
 }
 
 .weather-container input {
@@ -80,6 +85,11 @@ a {
     outline: none;
     border-radius: 0px 14px 0px 14px;
     box-shadow:0px 0px 10px whitesmoke;
+}
+
+
+.select{
+    margin: auto;
 }
 .select p {
     text-align: center;
@@ -179,6 +189,12 @@ width: 100%;
 
 }
 
+.info{
+    text-align: center; 
+    margin-top:2px;
+    font-size: 16px;
+}
+
 
 .blur{
     opacity: 0.3;
@@ -192,3 +208,18 @@ width: 100%;
     border-radius: 5px;
     text-align:left;
 }
+
+@media screen and (max-width: 790px){
+    body{
+      height: 250vh;
+    }
+
+    .weather-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+    }
+  
+  }
